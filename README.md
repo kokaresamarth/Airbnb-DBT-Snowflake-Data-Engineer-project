@@ -39,18 +39,23 @@ Source Data (CSV) → AWS S3 → Snowflake (Staging) → Bronze Layer → Silver
 ### 🟡 Medallion Architecture
 
 🥉 Bronze Layer (Raw Data)
+
 Raw data ingested from staging with minimal transformations:
 
-* **bronze_bookings** - Raw booking transactions
-* **bronze_hosts** - Raw host information
-* **bronze_listings** - Raw property listings
+* Edit **bronze_bookings** - Raw booking transactions
+* Edit **bronze_hosts** - Raw host information
+* Edit **bronze_listings** - Raw property listings
+  
 🥈 Silver Layer (Cleaned Data)
+
 Cleaned and standardized data:
 
 * **silver_bookings** - Validated booking records
 * **silver_hosts** - Enhanced host profiles with quality metrics
 * **silver_listings** - Standardized listing information with price categorization
+  
 🥇 Gold Layer (Analytics-Ready)
+
 Business-ready datasets optimized for analytics:
 
 * **obt** (One Big Table) - Denormalized fact table joining bookings, listings, and hosts
