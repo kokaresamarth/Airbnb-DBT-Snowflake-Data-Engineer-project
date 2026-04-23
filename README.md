@@ -12,8 +12,8 @@ This project demonstrates a complete **end-to-end data engineering pipeline** bu
 
 ```
 Source Data (CSV) → AWS S3 → Snowflake (Staging) → Bronze Layer → Silver Layer → Gold Layer
-                                      ↓              ↓             ↓
-                                  Raw Tables     Cleaned Data    Analytics
+                                                        ↓              ↓             ↓
+                                                    Raw Tables     Cleaned Data    Analytics
 ```
 
 ### 🧱 Layers Explained
@@ -38,22 +38,32 @@ Source Data (CSV) → AWS S3 → Snowflake (Staging) → Bronze Layer → Silver
 
 ### 🟡 Medallion Architecture
 
-* **Bronze** → Raw ingestion
-* **Silver** → Data cleaning & transformation
-* **Gold** → Analytics & reporting
+🥉 Bronze Layer (Raw Data)
+Raw data ingested from staging with minimal transformations:
+
+* **bronze_bookings** - Raw booking transactions
+* **bronze_hosts** - Raw host information
+* **bronze_listings** - Raw property listings
+🥈 Silver Layer (Cleaned Data)
+Cleaned and standardized data:
+
+* **silver_bookings** - Validated booking records
+* **silver_hosts** - Enhanced host profiles with quality metrics
+* **silver_listings** - Standardized listing information with price categorization
+🥇 Gold Layer (Analytics-Ready)
+Business-ready datasets optimized for analytics:
+
+* **obt** (One Big Table) - Denormalized fact table joining bookings, listings, and hosts
+* **fact** - Fact table for dimensional modeling
+* Ephemeral models for intermediate transformations
 
 ### 🔁 Snapshots (SCD Type 2)
 
-* Tracks historical changes in data
-* Maintains:
+Slowly Changing Dimensions to track historical changes:
 
-  * `dbt_valid_from`
-  * `dbt_valid_to`
-* Used for:
-
-  * `dim_bookings`
-  * `dim_hosts`
-  * `dim_listings`
+* **dim_bookings** - Historical booking changes
+* **dim_hosts** - Historical host profile changes
+* **dim_listings** - Historical listing changes
 
 ---
 
