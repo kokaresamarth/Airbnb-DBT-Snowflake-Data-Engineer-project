@@ -268,7 +268,9 @@ dbt run --select gold
 
 **Samarth Kokare**  
 Aspiring Data Engineer
+
 **Project:** Airbnb Data Engineering Pipeline
+
 **Technologies:** Snowflake, dbt, AWS, Python
 
 ## 🛠️ Troubleshooting
