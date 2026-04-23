@@ -179,7 +179,7 @@ pip install -r requirements.txt
 
 ### 🔌 Configure Snowflake Connection
 
-Edit `profiles.yml`:
+Create '~/.dbt/profiles.yml' :
 
 ```
 aws_dbt_snowflake_project:
