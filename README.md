@@ -171,10 +171,9 @@ pip install -r requirements.txt
 
 #### Core Dependencies:
 
-* dbt-core
-* dbt-snowflake
-* snowflake-connector-python
-* boto3
+* dbt-core>=1.11.2
+* dbt-snowflake>=1.11.0
+* sqlfmt>=0.0.3
 
 ---
 
