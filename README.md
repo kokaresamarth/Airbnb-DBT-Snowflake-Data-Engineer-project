@@ -264,6 +264,11 @@ dbt run --select gold
 
 ---
 
+## 👤 Author
+
+**Samarth Kokare**  
+Aspiring Data Engineer  
+
 ## 🛠️ Troubleshooting
 
 | Issue                | Solution                   |
