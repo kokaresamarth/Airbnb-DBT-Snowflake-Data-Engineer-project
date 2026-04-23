@@ -38,7 +38,7 @@ Source Data (CSV) → AWS S3 → Snowflake (Staging) → Bronze Layer → Silver
 
 ### 🟡 Medallion Architecture
 
-🥉 Bronze Layer (Raw Data)
+### 🥉 Bronze Layer (Raw Data)
 
 Raw data ingested from staging with minimal transformations:
 
@@ -46,7 +46,7 @@ Raw data ingested from staging with minimal transformations:
 *  'bronze_hosts' - Raw host information
 *  'bronze_listings' - Raw property listings
   
-🥈 Silver Layer (Cleaned Data)
+### 🥈 Silver Layer (Cleaned Data)
 
 Cleaned and standardized data:
 
@@ -54,7 +54,7 @@ Cleaned and standardized data:
 * 'silver_hosts' - Enhanced host profiles with quality metrics
 * 'silver_listings' - Standardized listing information with price categorization
   
-🥇 Gold Layer (Analytics-Ready)
+### 🥇 Gold Layer (Analytics-Ready)
 
 Business-ready datasets optimized for analytics:
 
