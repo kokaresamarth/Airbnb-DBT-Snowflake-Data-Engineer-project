@@ -42,24 +42,24 @@ Source Data (CSV) → AWS S3 → Snowflake (Staging) → Bronze Layer → Silver
 
 Raw data ingested from staging with minimal transformations:
 
-*  'bronze_bookings' - Raw booking transactions
-*  'bronze_hosts' - Raw host information
-*  'bronze_listings' - Raw property listings
+*  **bronze_bookings** - Raw booking transactions
+*  **bronze_hosts** - Raw host information
+*  **bronze_listings** - Raw property listings
   
 ### 🥈 Silver Layer (Cleaned Data)
 
 Cleaned and standardized data:
 
-* 'silver_bookings' - Validated booking records
-* 'silver_hosts' - Enhanced host profiles with quality metrics
-* 'silver_listings' - Standardized listing information with price categorization
+* **silver_bookings** - Validated booking records
+* **silver_hosts** - Enhanced host profiles with quality metrics
+* **silver_listings** - Standardized listing information with price categorization
   
 ### 🥇 Gold Layer (Analytics-Ready)
 
 Business-ready datasets optimized for analytics:
 
-* 'obt' (One Big Table) - Denormalized fact table joining bookings, listings, and hosts
-* 'fact' - Fact table for dimensional modeling
+* **obt** (One Big Table) - Denormalized fact table joining bookings, listings, and hosts
+* **fact** - Fact table for dimensional modeling
 * Ephemeral models for intermediate transformations
 
 ### 🔁 Snapshots (SCD Type 2)
