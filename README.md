@@ -1,6 +1,6 @@
 # 🏠 End-to-End Data Engineering Project using AWS, Snowflake & dbt
 
-## 📌** Overview**
+## 📌 Overview
 
 This project demonstrates a complete **end-to-end data engineering pipeline** built using modern cloud and data transformation tools. It covers data ingestion, transformation, modeling, and analytics using a structured approach (Medallion Architecture). The goal is to transform raw CSV data into clean, reliable, and analytics-ready datasets.
 
